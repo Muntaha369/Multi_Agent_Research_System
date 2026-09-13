@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* ─── Caramel Brown Design Tokens ─── */
+@theme inline {
+  --color-caramel-50: #fdf8f0;
+  --color-caramel-100: #f9edda;
+  --color-caramel-200: #f1d9b4;
+  --color-caramel-300: #e6be84;
+  --color-caramel-400: #dba256;
+  --color-caramel-500: #d08b35;
+  --color-caramel-600: #b8712a;
+  --color-caramel-700: #995725;
+  --color-caramel-800: #7d4724;
+  --color-caramel-900: #673b20;
+  --color-caramel-950: #3a1d0f;
+
+  --color-linen: #faf6f1;
+  --color-parchment: #f5ede3;
+  --color-warm-cream: #fefcf8;
+  --color-chocolate: #3e2317;
+  --color-espresso: #2a1810;
+  --color-mocha: #5c3a28;
+
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-out both;
+  --animate-slide-up: slide-up 0.4s ease-out both;
+  --animate-slide-down: slide-down 0.3s ease-out both;
+  --animate-shimmer: shimmer 2s ease-in-out infinite;
+  --animate-pulse-warm: pulse-warm 2.5s ease-in-out infinite;
+  --animate-spin-slow: spin 3s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 2000px; }
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: -200% center; }
+  50% { background-position: 200% center; }
+}
+
+@keyframes pulse-warm {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(208, 139, 53, 0.25); }
+  50% { box-shadow: 0 0 0 12px rgba(208, 139, 53, 0); }
+}
+
+/* ─── Base Styles ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(145deg, #faf6f1, #f5ede3, #fdf8f0);
+  color: #3e2317;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5ede3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d08b35;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8712a;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(208, 139, 53, 0.3);
+  color: #3e2317;
+}
