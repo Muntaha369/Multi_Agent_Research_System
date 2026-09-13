@@ -25,7 +25,7 @@ def research(topic:str):
     
     state["search_result"] = search_result["messages"][-1].content
 
-    print("Invoking scraping Agent")
+    # print("Invoking scraping Agent")
 
     scrape_result = scrape_agent.invoke({"messages":[{
         "role":"user",
@@ -45,23 +45,23 @@ def research(topic:str):
         """
     )
 
-    print("Writing your content")
+    # print("Writing your content")
     
     state["report"] = writer_chain.invoke({
         "topic":topic,
         "research": research_string
     })
 
-    print("Evaluating content")
+    # print("Evaluating content")
     
     state["feedback"] = critic_chain.invoke({
         "report":state['report']
     })
 
-    print("\n ========================================== \n")
+    # print("\n ========================================== \n")
 
-    print("\n  Report\n",state['report'])
-    print("\n Critic \n", state['feedback'])
+    # print("\n  Report\n",state['report'])
+    # print("\n Critic \n", state['feedback'])
 
     return {
             "topic": topic,
