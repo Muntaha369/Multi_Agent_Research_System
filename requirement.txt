@@ -1,0 +1,21 @@
+# Core agent/orchestration
+langchain
+langgraph
+langchain-core
+
+# OpenRouter LLM
+langchain-openrouter
+
+# Tavily web search
+langchain-tavily
+tavily
+
+# Web scraping
+beautifulsoup4
+requests
+
+# Environment variables
+python-dotenv
+
+# Optional: structured data validation
+pydantic

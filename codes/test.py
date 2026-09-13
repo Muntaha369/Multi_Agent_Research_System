@@ -1,10 +1,10 @@
-out = [
+OUT = [
     "Apple",
     "Banana",
     "Mango"
 ]
 
-response = "\n----\n".join(out)
+response = "\n----\n".join(OUT)
 
 print(response)
 print(type(response))
