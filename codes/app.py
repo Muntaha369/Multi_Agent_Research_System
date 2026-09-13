@@ -1,4 +1,16 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from agents import search_agent,scrape_agent,critic_chain,writer_chain
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def research(topic:str):
 
@@ -51,5 +63,17 @@ def research(topic:str):
     print("\n  Report\n",state['report'])
     print("\n Critic \n", state['feedback'])
 
-topic = input("\n Enter a research topic : ")
-research(topic)
+    return {
+            "topic": topic,
+            "search_result": state["search_result"],
+            "scrape_result": state["scrape_result"],
+            "report": state["report"],
+            "feedback": state["feedback"]
+        }
+
+@app.post("/research")
+def run_research(request: dict):
+
+    topic = request["topic"]
+
+    return research(topic)

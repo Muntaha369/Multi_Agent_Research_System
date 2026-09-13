@@ -19,3 +19,7 @@ python-dotenv
 
 # Optional: structured data validation
 pydantic
+
+# For connecting with front end
+fastapi
+uvicorn
