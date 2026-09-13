@@ -203,7 +203,7 @@ The critic stage acts as a quality-control layer before the research is consider
 | **FastAPI**               | REST API                              |
 | **Tavily**                | Web search                            |
 | **BeautifulSoup**         | Web scraping and HTML parsing         |
-| **LangChain / LangGraph** | Agent orchestration                   |
+| **LangChain** | Agent orchestration                   |
 | **LLM**                   | Research, writing and evaluation      |
 
 ### Frontend
@@ -224,25 +224,16 @@ A typical project structure looks like:
 ```text
 research-point/
 │
-├── backend/
-│   ├── agents/
-│   │   ├── search_agent.py
-│   │   ├── writer_agent.py
-│   │   └── critic_agent.py
-│   │
-│   ├── scraping/
-│   │   └── scraper.py
-│   │
-│   ├── api/
-│   │   └── routes.py
-│   │
-│   ├── main.py
-│   ├── requirements.txt
-│   └── .env
+├── server/
+│   ├── codes/
+│   │   ├── agents.py
+│   │   ├── app.py
+│   │   └── tools.py
+│   │ 
+│   └── requirements.txt
 │
-├── frontend/
+├── client/
 │   ├── app/
-│   ├── components/
 │   ├── public/
 │   ├── package.json
 │   └── ...
