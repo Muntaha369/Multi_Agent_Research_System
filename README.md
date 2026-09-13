@@ -426,32 +426,6 @@ It also allows individual agents to be improved independently without redesignin
 
 ---
 
-## 🤝 Contributing
-
-Contributions, ideas, and improvements are welcome.
-
-If you would like to contribute:
-
-```bash
-git checkout -b feature/your-feature
-```
-
-Make your changes, commit them, and open a pull request.
-
----
-
-## 📄 License
-
-Add your preferred license here.
-
-For example:
-
-```text
-MIT License
-```
-
----
-
 ## ⭐ About
 
 **Research Point** is an AI-powered multi-agent research system designed to automate the journey from:
