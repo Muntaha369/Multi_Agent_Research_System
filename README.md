@@ -237,7 +237,8 @@ research-point/
 │   ├── public/
 │   ├── package.json
 │   └── ...
-│
+├── .gitignore
+├── .env
 └── README.md
 ```
 
