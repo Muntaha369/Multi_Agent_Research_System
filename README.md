@@ -308,7 +308,7 @@ Create a `.env` file:
 
 ```env
 TAVILY_API_KEY=your_tavily_api_key
-LLM_API_KEY=your_llm_api_key
+OPENROUTER_API_KEY=your_llm_api_key
 ```
 
 Start the FastAPI server:
@@ -431,27 +431,6 @@ Critic Agent
 This separation makes the research workflow easier to control, debug, and improve.
 
 It also allows individual agents to be improved independently without redesigning the entire system.
-
----
-
-## 🔮 Future Improvements
-
-Possible future improvements include:
-
-* [ ] Automatic retry for failed web scrapes
-* [ ] Better source-quality filtering
-* [ ] Citation generation
-* [ ] Source credibility scoring
-* [ ] Parallel web scraping
-* [ ] More specialized research agents
-* [ ] Iterative writer → critic → writer refinement
-* [ ] Research history and saved reports
-* [ ] PDF export
-* [ ] Report streaming
-* [ ] Authentication and user accounts
-* [ ] Background research jobs
-* [ ] Better handling of JavaScript-rendered websites
-* [ ] Improved factual verification
 
 ---
 
